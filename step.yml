@@ -7,9 +7,9 @@ description: |-
   It can handle both files and directories, uploading the contents to the specified S3 bucket with the desired access control settings.
 
   Using the Authenticate with AWS Step beforehand is recommended to securely provide short lived AWS credentials.
-website: https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload
-source_code_url: https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload
-support_url: https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload/issues
+website: https://github.com/CodeFishStudio/aws-s3-upload-bitrise-step
+source_code_url: https://github.com/CodeFishStudio/aws-s3-upload-bitrise-step
+support_url: https://github.com/CodeFishStudio/aws-s3-upload-bitrise-step/issues
 
 type_tags:
 - utility

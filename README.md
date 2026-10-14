@@ -2,6 +2,22 @@
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-aws-s3-upload?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload/releases)
 
+> **CodeFish Studio fork** of [bitrise-steplib/bitrise-step-aws-s3-upload](https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload).
+> Fixes [upstream issue #5](https://github.com/bitrise-steplib/bitrise-step-aws-s3-upload/issues/5): the `acl_control` input was never sent to S3, so `public-read` uploads stayed private.
+>
+> Use it in `bitrise.yml`:
+>
+> ```yaml
+> - git::https://github.com/CodeFishStudio/aws-s3-upload-bitrise-step.git@main:
+>     inputs:
+>     - path: $BITRISE_IPA_PATH
+>     - bucket_name: my-bucket
+>     - bucket_prefix: client-builds/$BITRISE_BUILD_NUMBER
+>     - acl_control: public-read
+> ```
+>
+> `public-read` requires the bucket to have ACLs enabled (Object Ownership: "ACLs enabled") and the ACL settings under Block Public Access turned off.
+
 The Step uploads a file to an Amazon S3 bucket.
 
 <details>
